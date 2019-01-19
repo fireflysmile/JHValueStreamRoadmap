@@ -1,0 +1,10 @@
+<div class="jh-modal">
+  <div class="jh-modal-body">
+      <button (click)="close()" class="modal-close" ><span class="ico ico-close"></span></button>
+      <ng-content select=".modal-header"></ng-content>
+      <div class="jh-modal-body-content">
+        <ng-content></ng-content>
+      </div>
+  </div>
+</div>
+<div class="jh-modal-background"></div>
