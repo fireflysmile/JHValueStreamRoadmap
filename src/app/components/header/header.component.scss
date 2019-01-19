@@ -1,0 +1,16 @@
+.header {
+    height: 56px;
+    background-color: #282b3e;
+    .logo {
+        height: 56px;
+        background-color: #00a758;
+        width: 256px;
+        text-align: center;
+        padding-top: 15px;
+        display: block;
+        box-sizing: border-box;
+        img {
+            width: 192px;
+        }
+    }
+}
