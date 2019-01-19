@@ -25,3 +25,37 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+##use modal
+*.html
+use div with class .modal-header to wrap header
+example:
+<button (click)="openModal('custom-modal-1')">Open Modal 1</button>
+<div class="modal-header">this is head</div>
+<app-modal id="custom-modal-1">
+  <h1>A Custom Modal!</h1>
+  <p>Home page text:</p>
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</app-modal>
+
+*.ts
+import { ModalService } from './components/modal/modal.service';
+
+constructor(private modalService: ModalService) {
+}
+//to show Modal
+openModal(id: string) {
+    this.modalService.open(id);
+}
+
+//to hide Modal
+closeModal(id: string) {
+    this.modalService.close(id);
+}
+
+//to remove Modal
+removeModal(id: string) {
+    this.modalService.remove(id);
+}
+----
